@@ -1,0 +1,3 @@
+scp -o StrictHostKeyChecking=no  C:\Users\Mike Sosa\.ssh\ssh_config mike.cit270.com:/etc/letsencrypt/archive/mike.cit270.com/fullchain1.pem ./
+scp -o StrictHostKeyChecking=no ' C:\Users\Mike Sosa\.ssh\ssh_config mike.cit270.com:/etc/letsencrypt/archive/mike.cit270.com/fullchain1.pem ./
+scp mike@mike.cit270.com:/etc/letsencrypt/archive/mike.cit270.com/fullchain1.pem ./

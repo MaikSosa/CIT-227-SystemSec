@@ -3,6 +3,9 @@ node_modules
 login.sh
 server.cert
 server.key
+cert1.pem
+fullchain1.pem
+privkey1.pem
 Symmetric and asymmetric.pptx
 Teaching steps.txt
 Win64OpenSSL_Light-3_1_0.msi
