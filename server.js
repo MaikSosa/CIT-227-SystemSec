@@ -6,7 +6,7 @@ const { createHash } = require ('node:crypto')
 const https = require('https')
 const fs = require('fs')
 
-const port = 3000;const redisClient = Redis.createClient({url:'redis://127.0.0.1:6379'});
+const port = 443;const redisClient = Redis.createClient({url:'redis://127.0.0.1:6379'});
 
 app.use(bodyParser.json()); //allow json request (JSON = JavaScript Object Notation)
 
@@ -18,7 +18,7 @@ https.createServer({
     key: fs.readFileSync('/etc/letsencrypt/archive/mike.cit270.com/privkey1.pem'),
     cert: fs.readFileSync('/etc/letsencrypt/archive/mike.cit270.com/cert1.pem'),
     chain:fs.readFileSync('/etc/letsencrypt/archive/mike.cit270.com/chain1.pem')//This is a self-signed ceriticated.
-  }, app).listen(3000, () => {
+  }, app).listen(443, () => {
     redisClient.connect();
     console.log('Listening...')
   })
