@@ -15,9 +15,9 @@ app.get('/',(req,res)=>{
 })
 
 https.createServer({
-    key: fs.readFileSync('privkey1.pem'),
-    cert: fs.readFileSync('cert1.pem'),
-    chain:fs.readFileSync('fullchain1.pem')//This is a self-signed ceriticated.
+    key: fs.readFileSync('/etc/letsencrypt/archive/mike.cit270.com/privkey1.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/archive/mike.cit270.com/cert1.pem'),
+    chain:fs.readFileSync('/etc/letsencrypt/archive/mike.cit270.com/chain1.pem')//This is a self-signed ceriticated.
   }, app).listen(3000, () => {
     redisClient.connect();
     console.log('Listening...')
