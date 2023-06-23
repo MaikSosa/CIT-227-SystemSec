@@ -1,5 +1,7 @@
 FROM node:alpine
 
+WORKDIR /usr/app
+
 copy package.json ./
 copy server.js ./
 
