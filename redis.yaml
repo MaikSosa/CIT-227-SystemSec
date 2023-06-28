@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: redis-stedi-mike  # has to match .spec.template.metadata.labels
-  serviceName: redis-stedi-
+  serviceName: redis-stedi-mike
   replicas: 1
   template:
     metadata:
