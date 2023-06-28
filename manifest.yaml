@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
 # This is the name of my deployment
-  name: cit270MIKEservice
+  name: cit270mikeservice
 # The specification for our deployment
 spec:
 # How many pods?
@@ -11,20 +11,20 @@ spec:
 # Used to identify the pod we want to talk to  
   selector:
     matchLabels:
-      app: cit270MIKEservice
+      app: cit270mikeservice
 # Template to create containers
   template:
     metadata:
-      name: cit270MIKEservice
+      name: cit270mikeservice
       labels:
-        app: cit270MIKEservice
+        app: cit270mikeservice
 # specification for pod        
     spec:
       containers:
 # name of container      
-      - name: cit270MIKEservice
+      - name: cit270mikeservice
 # Docker image registry      
-        image:    #paste here from artifact registry pls :)
+        image:    us-docker.pkg.dev/cit270-kubernetes-team/token-api-mike/image
 # First part of the command to start our API          
         command: ["npm"]
 # Parameters to add to the command        
