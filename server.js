@@ -7,7 +7,7 @@ const https = require('https')
 const fs = require('fs')
 
 const port = 3000;
-const redisClient = Redis.createClient({url:'redis://127.0.0.1:6379'});
+const redisClient = Redis.createClient({url:'mike.cit270.com:6379'});
 
 app.use(bodyParser.json()); //allow json request (JSON = JavaScript Object Notation)
 
