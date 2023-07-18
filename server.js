@@ -7,13 +7,19 @@ const https = require('https')
 const fs = require('fs')
 
 const port = 3000;
-const redisClient = Redis.createClient({url:'mike.cit270.com:6379'});
+const redisClient = Redis.createClient({
+    // url:'redis://default:Password1@redis-stedi-spencer:6379'
+    socket:{ 
+        host: 'redis-stedi-mike',
+        port: '6379'
+    }
+});
 
 app.use(bodyParser.json()); //allow json request (JSON = JavaScript Object Notation)
 
 app.get('/',(req,res)=>{
     res.send("Welcome to my Node Servier");
-})
+});
 
 app.listen(port, () => {
     redisConnect ?
