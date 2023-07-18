@@ -1,10 +1,11 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const Redis = require('redis')
-const app = express()
-const { createHash } = require ('node:crypto')
-const https = require('https')
-const fs = require('fs')
+const express = require('express');
+const bodyParser = require('body-parser');
+const Redis = require('redis');
+const { createHash } = require('node:crypto');
+const https = require('https');
+const fs = require('fs');
+
+const app = express();
 
 const port = 3000;
 const redisClient = Redis.createClient({
@@ -23,8 +24,7 @@ app.get('/',(req,res)=>{
 
 app.listen(port, () => {
     redisConnect.connect();
-        console.log('You are connected to Redis!');
-       console.log("Sorry, you're not connected to Redis.")
+        console.log('You are connected to Redis!')
 });
 
 /* https.createServer({
