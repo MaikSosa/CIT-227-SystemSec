@@ -61,7 +61,7 @@ metadata:
   name: stedi-mike-certificate
 spec:
   domains:
-    - mike.cit270.com # this needs to be your domain name from DNS
+    - mike.cit270.com. # this needs to be your domain name from DNS
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
