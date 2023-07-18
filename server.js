@@ -10,7 +10,7 @@ const app = express();
 const port = 3000;
 
 const redisClient = Redis.createClient({
-    // url:'redis://default:Password1@redis-stedi-spencer:6379'
+    // url:'redis://redis-stedi-mike:6379'
     socket:{ 
         host: 'redis-stedi-mike',
         port: '6379'
