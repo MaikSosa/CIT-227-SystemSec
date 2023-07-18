@@ -24,7 +24,7 @@ spec:
 # name of container      
       - name: cit270mikeservice
 # Docker image registry      
-        image:    us-docker.pkg.dev/cit270-kubernetes-team/token-api-mike/image
+        image:    us-docker.pkg.dev/cit270-kubernetes-team/token-api-mike/node.js
 # First part of the command to start our API          
         command: ["npm"]
 # Parameters to add to the command        
