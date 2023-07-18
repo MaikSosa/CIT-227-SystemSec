@@ -22,9 +22,9 @@ app.get('/',(req,res)=>{
 });
 
 app.listen(port, () => {
-    redisConnect ?
-        console.log('You are connected to Redis!')
-    :   console.log("Sorry, you're not connected to Redis.")
+    redisConnect.connect();
+        console.log('You are connected to Redis!');
+       console.log("Sorry, you're not connected to Redis.")
 });
 
 /* https.createServer({
