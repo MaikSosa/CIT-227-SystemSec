@@ -8,11 +8,11 @@ const fs = require('fs');
 const app = express();
 
 const port = 3000;
+
 const redisClient = Redis.createClient({
     // url:'redis://default:Password1@redis-stedi-spencer:6379'
     socket:{ 
-        host:'127.0.0.1',
-        //host: 'redis-stedi-mike',
+        host: 'redis-stedi-mike',
         port: '6379'
     }
 });
@@ -20,11 +20,11 @@ const redisClient = Redis.createClient({
 app.use(bodyParser.json()); //allow json request (JSON = JavaScript Object Notation)
 
 app.get('/',(req,res)=>{
-    res.send("Welcome to my Node Servier");
+    res.send("Welcome to my Node Server");
 });
 
 app.listen(port, () => {
-    redisConnect.connect();
+    redisClient.connect();
         console.log('You are connected to Redis!')
 });
 
